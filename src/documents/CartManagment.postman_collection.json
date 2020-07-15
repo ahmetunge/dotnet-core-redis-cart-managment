@@ -1,0 +1,82 @@
+{
+	"info": {
+		"_postman_id": "1063d3c9-3b98-4337-8122-1237507e103c",
+		"name": "CartManagment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Cart",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{basePath}}/cart?key=Ahmet",
+					"host": [
+						"{{basePath}}"
+					],
+					"path": [
+						"cart"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "Ahmet"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Set Cart",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":\"Ahmet1\",\r\n    \"items\": [\r\n        {\r\n            \"id\": 1907,\r\n            \"productName\": \"Product Name 2\",\r\n            \"price\": 150,\r\n            \"quantity\": 1\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{basePath}}/cart",
+					"host": [
+						"{{basePath}}"
+					],
+					"path": [
+						"cart"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Cart",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{basePath}}/cart?key=Ahmet",
+					"host": [
+						"{{basePath}}"
+					],
+					"path": [
+						"cart"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "Ahmet"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
